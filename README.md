@@ -6,7 +6,8 @@ Thank you for taking the time to do this coding assessment. Don't stress too muc
 
 -   The purpose of this assessment is to help us evaluate your application development coding skills.
 -		You will mostly be graded on the functionality & architecture of your code
--   You will be partly graded on your UX/UI or visual design skills
+-   You will be partly graded on your UX/UI or visual design skills. Though we use styled-components, feel free to use that or replace them with whatever
+		is your preferred styling method!
 -   You are allowed to use any non-human resource. Ex:
     -   **Allowed:** StackOverflow, Google, reference code on Github, etc.
     -   **Not Allowed:** Chatting or calling your old boss, using the code of your friend who already took this assessment
