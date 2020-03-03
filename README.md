@@ -1,23 +1,22 @@
 # NBA - ReactJS Interview
 
-Thank you for taking the time to do this coding assessment. Please read the guidelines before getting started.
+Thank you for taking the time to do this coding assessment. Don't stress too much about any one thing - just do the best you can with the time you're given! Please read the guidelines before getting started.
 
 ## Assessment Guidelines:
 
 -   The purpose of this assessment is to help us evaluate your application development coding skills.
+-		You will mostly be graded on the functionality & architecture of your code
 -   You will be partly graded on your UX/UI or visual design skills
 -   You are allowed to use any non-human resource. Ex:
     -   **Allowed:** StackOverflow, Google, reference code on Github, etc.
     -   **Not Allowed:** Chatting or calling your old boss, using the code of your friend who already took this assessment
 -   You must use the skeleton project as the start for your code
--   You may use external projects and frameworks or copy and paste examples under two conditions:
-    -   Make sure to commit any changes you make immediately before and after including the external code and make note of it in the commit message when you add it.
-    -   Make sure you still provide us with enough of your own code to get a feel for how you think
+-   Feel free to add any other external frameworks, libraries, or plugins you feel would help you best (current structure involves react, redux, and some styled-components)
 -   Check out the API index at http://localhost:3008. Note that the api uses json-server: https://github.com/typicode/json-server
--   Don't be overwhelmed, there are supposed to be more steps than you are likely to complete in the 4 hour time frame. Try to do them in order, but you might be able to skip steps if you get stuck.
+-   Don't be overwhelmed - it's structured to have more steps than you are likely to complete in the 4-hour time frame. Try to do them in order, but you are allowed to skip steps if you get stuck.
 -   Put the time that you start and end on the first line of notes.md. Also, add any grading advice, disclaimers, brags, feedback, or anomalies you encounter along your way.
 -   This is a git repo. Plesse try to commit often and add messages to your commits so we can more easily review your work.
--   We added more steps than we expect you to finish. Don't be overwhelmed and get as far as you can in the 4 hours that you have. We will take into account the amount of time you took, the amount of experience you have in ReactJS, etc.
+-   Again, we added more steps than we expect you to finish! Don't be overwhelmed and get as far as you can in the 4 hours that you have. We will take into account the amount of time you took, the amount of experience you have in ReactJS, etc.
 -   **The webpack server and API server for the project can be run via `npm start`**.
 
 ### PART I - Basic Data Retrieval
