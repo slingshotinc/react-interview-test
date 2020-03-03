@@ -14,10 +14,14 @@
     "styled-components": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "./node_modules/.bin/concurrently \"cd ./node_modules/react-interview-json-server && node index.js\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "react-interview-json-server": "git+https://gitlab.com/getslingshot/react-interview-json-server.git"
   },
   "eslintConfig": {
     "extends": "react-app"
