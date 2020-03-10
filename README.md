@@ -1,5 +1,7 @@
 # NBA - ReactJS Interview
 
+** When you clone this repo, please create a new branch for your changes. Feel free to name the branch as you please! **
+
 Thank you for taking the time to do this coding assessment. Don't stress too much about any one thing - just do the best you can with the time you're given! Please read the guidelines before getting started.
 
 ## Assessment Guidelines:
