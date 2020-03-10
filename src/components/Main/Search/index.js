@@ -1,10 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 import { Container, SearchInput } from "./styles";
 
-const Search = () => (
-	<Container>
-		<SearchInput placeholder="Search..." />
-	</Container>
-);
+export default class Search extends Component {
+	static displayName = Search.name;
 
-export default Search;
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<Container>
+				<SearchInput placeholder="Search..." onBlur={this.props.searchPlayers} />
+			</Container>
+		);
+	}
+}
