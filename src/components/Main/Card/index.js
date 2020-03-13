@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, Name, PlayerImg, Team } from "./styles";
 
-const Card = () => (
-	<Container>
-		<Name>Gordon "Snake" Hayward</Name>
-		<PlayerImg src="http://localhost:3008/gordon_hayward.png" alt="player_image" />
-		<Team>Boston Celtics</Team>
-	</Container>
+const Card = ({ name, image, team }) => (
+  <Container>
+    <Name>{name}</Name>
+    <PlayerImg src={`http://localhost:3008/${image}`} alt="player_image" />
+    <Team>{team}</Team>
+  </Container>
 );
 
 export default Card;
