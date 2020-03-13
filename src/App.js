@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import Search from "./Search";
-import Card from "./Card";
+import Search from "./components/Search";
+import Card from "./components/Card";
 
 export const Container = styled.div`
 	height: 100%;
@@ -15,7 +15,7 @@ export const Title = styled.p`
  	text-align: center;
 `
 
-const Main = () => (
+const App = () => (
   <Container>
     <Title>NBA Interview</Title>
     <Search />
@@ -23,5 +23,5 @@ const Main = () => (
   </Container>
 )
 
-export default Main;
+export default App;
 
