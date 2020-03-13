@@ -55,6 +55,10 @@ const Main = () => {
       .catch(error => console.log(error));
   };
 
+  const handleCardEdit = e => {
+    console.log("handle edit");
+  };
+
   const handlePageNext = () => {
     setPage(page + 1);
   };
@@ -81,9 +85,9 @@ const Main = () => {
         teams.length &&
         players.map(player => (
           <Card
+            {...player}
             key={player.name}
-            name={player.name}
-            image={player.image}
+            handleEdit={handleCardEdit}
             team={getTeamName(player.team)}
           />
         ))}
