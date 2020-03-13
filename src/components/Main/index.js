@@ -8,6 +8,7 @@ const Main = () => {
   const playerCount = 98; // TODO: get this from api later
   const [players, setPlayers] = useState([]);
   const [teams, setTeams] = useState([]);
+  const [search, setSearch] = useState();
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -38,6 +39,22 @@ const Main = () => {
       .catch(error => console.log(error));
   }, [page]);
 
+  const handleSearch = e => {
+    const value = e.target.value;
+    setSearch(value);
+    fetch(`http://localhost:3008/players?q=${value}`, {
+      method: "GET",
+      headers: new Headers({
+        Accept: "application/json"
+      })
+    })
+      .then(res => res.json())
+      .then(json => {
+        setPlayers(json);
+      })
+      .catch(error => console.log(error));
+  };
+
   const handlePageNext = () => {
     setPage(page + 1);
   };
@@ -53,7 +70,7 @@ const Main = () => {
   return (
     <Container>
       <Title>NBA Interview</Title>
-      <Search />
+      <Search handleSearch={handleSearch} />
       <ButtonContainer>
         {page > 1 && <Button onClick={handlePagePrev}>&lt; Prev 10</Button>}
         {page < Math.ceil(playerCount / limit) && (

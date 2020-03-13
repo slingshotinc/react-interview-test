@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, SearchInput } from "./styles";
 
-const Search = () => (
-	<Container>
-		<SearchInput placeholder="Search..." />
-	</Container>
+const Search = ({ handleSearch }) => (
+  <Container>
+    <SearchInput placeholder="Search..." onChange={handleSearch} />
+  </Container>
 );
 
 export default Search;
