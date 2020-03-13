@@ -9,10 +9,20 @@ export const SearchInput = styled.input`
 	
 `
 
-const Search = () => (
-	<Container>
-		<SearchInput placeholder="Search..." />
-	</Container>
-);
+const Search = ({term, setTerm}) => {
+	const handleChange = (event) => {
+		setTerm(event.target.value)
+	}
+
+	return (
+		<Container>
+			<SearchInput 
+				value={term}
+				onChange={handleChange} 
+				placeholder="Search..." 
+			/>
+		</Container>
+	)
+};
 
 export default Search;

@@ -4,14 +4,17 @@ import React from "react";
 // const { Consumer } = AppContext;
 import Card from "./Card";
 
-const Players = () => {
+const Players = ({term}) => {
   // const players = React.useContext(AppContext)
   const [players, setPlayers] = React.useState([]);
   
   const baseUrl = 'http://localhost:3008'
   const route = '/players'
-  const query = '?'
-  const url = `${baseUrl}${route}${query}`;
+  const searchQuery = `q=${term}`
+  const pageQuery = '&_page=1'
+  const limitQuery = '_limit=10'
+  const query = `?${searchQuery}&${limitQuery}&${pageQuery}`
+  const url = `${baseUrl}${route}${query}`
 
   React.useEffect(() => {
     const fetchData = async () => {

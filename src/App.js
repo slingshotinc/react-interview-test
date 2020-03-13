@@ -15,12 +15,15 @@ export const Title = styled.p`
  	text-align: center;
 `
 
-const App = () => (
-  <Container>
-    <Title>NBA Interview</Title>
-    <Search />
-    <Players></Players>
-  </Container>
-)
+const App = () => {
+  const [searchTerm, setSearchTerm] = React.useState('guard')
+  return (
+    <Container>
+      <Title>NBA Interview</Title>
+      <Search term={searchTerm} setTerm={setSearchTerm}/>
+      <Players term={searchTerm}/>
+    </Container>
+  )
+}
 
 export default App;
