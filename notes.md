@@ -1,3 +1,15 @@
-Start Time: 9:15
-End Time:
-Put any notes for us here (If you feel you need to explain how / why you did something the way you did):
+# Notes
+
+### Times
+
+* Start time: 9:15
+* End time: 17:15
+* Total time on project: ~6 hours (see below)
+
+### Comments
+
+* I took a long break after completing Part 2.  After the break I worked on parts 3 and 4 together since they were somewhat related.  My 4 hours (of project time) were up before my final commit.  I'd estimate I put closer to 6 hours in to get where I did.
+
+* I didn't get around to refactoring to use useContext (the prop drilling was already getting out of hand).  It's messier than I'd like it to have left it.
+
+* I'm happy to complete the project if you'd like to see how I'd have finished if I had more time.
