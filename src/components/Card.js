@@ -20,14 +20,33 @@ export const PlayerImg = styled.img`
 
 export const Team = styled.p`
 	
-`
+`	
 
-const Card = () => (
-	<Container>
-		<Name>Gordon "Snake" Hayward</Name>
-		<PlayerImg src="http://localhost:3008/gordon_hayward.png" alt="player_image" />
-		<Team>Boston Celtics</Team>
-	</Container>
-);
+const Card = (props) => {
+	const [teamData, setTeamData] = React.useState({});
+	const { name, image, team } = props
+  
+  const baseUrl = 'http://localhost:3008'
+  const route = `/teams/${team}`
+  const query = '?'
+  const url = `${baseUrl}${route}${query}`;
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch(url);
+      const result = await response.json();
+      setTeamData(result);
+    };
+    fetchData();
+	}, [url]);
+	
+	return (
+		<Container>
+			<Name>{name}</Name>
+			<PlayerImg src={`http://localhost:3008/${image}`} alt="player_image" />
+			<Team>{teamData.name}</Team>
+		</Container>
+	)
+};
 
 export default Card;

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import Search from "./components/Search";
-import Card from "./components/Card";
+import Players from "./components/Players"
 
 export const Container = styled.div`
 	height: 100%;
@@ -19,9 +19,8 @@ const App = () => (
   <Container>
     <Title>NBA Interview</Title>
     <Search />
-    <Card />
+    <Players></Players>
   </Container>
 )
 
 export default App;
-
