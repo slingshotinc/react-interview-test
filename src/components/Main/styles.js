@@ -11,7 +11,8 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.p`
-  font-size: 24px;
+  font-size: 48px;
+  font-weight: 800;
   padding-bottom: 32px;
   text-align: center;
   color: white;
