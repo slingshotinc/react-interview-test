@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Button,
   ButtonWrapper,
@@ -15,18 +15,41 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
-const Card = ({ name, college, position, image, team, handleEdit }) => {
+const Card = ({ player, team, updateComplete }) => {
   const [editActive, setEditActive] = useState(false);
+  const [edit, setEdit] = useState({});
+
+  useEffect(() => {
+    setEdit(player);
+  }, [player]);
+
+  const handleSave = () => {
+    fetch(`http://localhost:3008/players/${edit.id}`, {
+      method: "PATCH",
+      headers: new Headers({
+        "Content-Type": "application/json"
+      }),
+      body: JSON.stringify(edit)
+    })
+      .then(res => {
+        updateComplete();
+      })
+      .catch(error => console.log(error));
+  };
+
+  const handleChange = e => {
+    setEdit({ ...edit, [e.target.name]: e.target.value });
+  };
 
   const handleClick = e => {
-    setEditActive(!editActive);
-    handleEdit(e);
+    setEditActive(true);
   };
 
   const handleCancel = () => {
     setEditActive(false);
   };
 
+  const { name, image } = player;
   return (
     <Container>
       <FontAwesomeIcon icon={faEdit} onClick={handleClick} />
@@ -37,19 +60,36 @@ const Card = ({ name, college, position, image, team, handleEdit }) => {
         <FormInner>
           <InputWrapper>
             <Label>Name:</Label>
-            <Input type="text" value={name} />
+            <Input
+              name="name"
+              type="text"
+              value={edit.name}
+              onChange={handleChange}
+            />
           </InputWrapper>
           <InputWrapper>
             <Label>College:</Label>
-            <Input type="text" value={college} />
+            <Input
+              name="college"
+              type="text"
+              value={edit.college}
+              onChange={handleChange}
+            />
           </InputWrapper>
           <InputWrapper>
             <Label>Position:</Label>
-            <Input type="text" value={position} />
+            <Input
+              name="position"
+              type="text"
+              value={edit.position}
+              onChange={handleChange}
+            />
           </InputWrapper>
         </FormInner>
         <ButtonWrapper>
-          <Button bg={"#bbff9f"}>Save</Button>
+          <Button bg={"#bbff9f"} onClick={handleSave}>
+            Save
+          </Button>
           <Button onClick={handleCancel}>Cancel</Button>
         </ButtonWrapper>
       </Form>

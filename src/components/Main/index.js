@@ -26,6 +26,10 @@ const Main = () => {
   }, []);
 
   useEffect(() => {
+    fetchPlayers();
+  }, [page]);
+
+  const fetchPlayers = () => {
     fetch(`http://localhost:3008/players?_page=${page}&_limit=${limit}`, {
       method: "GET",
       headers: new Headers({
@@ -37,8 +41,7 @@ const Main = () => {
         setPlayers(json);
       })
       .catch(error => console.log(error));
-  }, [page]);
-
+  };
   const handleSearch = e => {
     const value = e.target.value;
     setSearch(value);
@@ -85,10 +88,11 @@ const Main = () => {
         teams.length &&
         players.map(player => (
           <Card
-            {...player}
+            player={player}
             key={player.name}
             handleEdit={handleCardEdit}
             team={getTeamName(player.team)}
+            updateComplete={fetchPlayers}
           />
         ))}
     </Container>
