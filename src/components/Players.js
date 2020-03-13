@@ -4,9 +4,10 @@ import React from "react";
 // const { Consumer } = AppContext;
 import Card from "./Card";
 
-const Players = ({term}) => {
+const Players = ({term, isEditing, setIsEditing, favorites, setFavorites}) => {
   // const players = React.useContext(AppContext)
   const [players, setPlayers] = React.useState([]);
+  const [isFavorite, setIsFavorite] = React.useState(true)
   
   const baseUrl = 'http://localhost:3008'
   const route = '/players'
@@ -28,7 +29,16 @@ const Players = ({term}) => {
   return (
     players.map(player => {
       return (
-        <Card key={player.id} {...player}/>
+        <Card 
+          {...player}
+          key={player.id} 
+          isEditing={isEditing} 
+          setIsEditing={setIsEditing}
+          favorites={favorites} 
+          setFavorites={setFavorites}
+          isFavorite={isFavorite}
+          setIsFavorite={setIsFavorite}
+        />
       )
     })
   )
