@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -20,3 +21,13 @@ export const PlayerImg = styled.img`
 export const Team = styled.p`
 	
 `
+
+const Card = () => (
+	<Container>
+		<Name>Gordon "Snake" Hayward</Name>
+		<PlayerImg src="http://localhost:3008/gordon_hayward.png" alt="player_image" />
+		<Team>Boston Celtics</Team>
+	</Container>
+);
+
+export default Card;

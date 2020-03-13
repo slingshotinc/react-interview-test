@@ -1,6 +1,7 @@
-import { createStore, combineReducers } from "redux";
+import React from "react";
 
-const combinedReducers = combineReducers({
-});
+export const context = {
+	players: []
+}
 
-export default createStore(combinedReducers);
+export const AppContext = React.createContext(context);

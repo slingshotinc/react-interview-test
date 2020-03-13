@@ -1,5 +1,13 @@
 import React from "react";
-import { Container, SearchInput } from "./styles";
+import styled from "styled-components";
+
+export const Container = styled.div`
+	
+`
+
+export const SearchInput = styled.input`
+	
+`
 
 const Search = () => (
 	<Container>
