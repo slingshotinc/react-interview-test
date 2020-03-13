@@ -17,3 +17,17 @@ export const Title = styled.p`
   text-align: center;
   color: white;
 `;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
+`;
+
+export const Button = styled.button`
+  padding: 12px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+`;
