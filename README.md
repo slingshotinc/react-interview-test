@@ -1,8 +1,8 @@
 # NBA - ReactJS Interview
-Welcome to Slingshot's React Interview! Sit back and relax, because this will be fun! 🍿
+Welcome to Slingshot's React Interview! Sit back and relax, because this will be fun! 🍿 
 
 ## Before Starting
-Thank you for taking the time to do this coding assessment. Don't stress too much about any one thing and definitely don't stress if you don't finish every step - the project has more steps than you are likely to be able to complete in the given timeframe. Just do the best you can with the time you're given!
+Thank you for taking the time to do this coding assessment. Don't stress too much about any one thing and definitely don't stress if you don't finish every step - the project has more steps than you are likely to be able to complete in the given timeframe. Just do the best you can with the time you're given! There's a `notes.txt` file in this project. After you are finished, please feel free to add notes there on anything you might have done differently or might have implemented if you had more time!
 
 ## Assessment Guidelines:
 This project was created with `create-react-app`. You can start both the server & client with `yarn start` / `npm start`.
